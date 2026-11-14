@@ -16,6 +16,8 @@
 !/docs/DATA.md
 !/docs/REPRODUCING.md
 !/docs/CD8_BIOLOGY_REFERENCES.json
+!/docs/CD4_BIOLOGY_REFERENCES.json
+!/docs/CD4_BIOLOGY.md
 
 # Never include caches, credentials or generated analysis artifacts.
 __pycache__/

@@ -27,6 +27,16 @@ export MPLCONFIGDIR="$PWD/.cache/matplotlib"
 
 这些目录在运行时生成，不作为公开仓库内容提交。程序保留已有输出，重复实验应先查看对应脚本的`--help`并选择新运行目录。
 
+## CD4共同505人特征解释
+
+完成CD4共同队列训练与pool分组Elastic Net补充后执行：
+
+```bash
+python src/interpret_cd4.py
+```
+
+该入口按实际主分析名单对齐505人，读取已验证模型的稳定性表，计算代表基因与年龄的相关性及调整亚群比例后的相关性，生成汇总表与图。它读取现有模型结果，保留主基准预测和分数。代表基因与文献依据见[CD4解释](CD4_BIOLOGY.md)，输出位于本地`results/cd4_biology_common505_verified/`。
+
 ## CD8最大可用队列与特征解释
 
 下列独立入口使用CD8最大可用队列，与共同505人主基准分别记录：
