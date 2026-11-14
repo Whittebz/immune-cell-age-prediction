@@ -1,0 +1,36 @@
+{
+  "protocol_id": "common_v1",
+  "annotation_column": "predicted.celltype.l2",
+  "source_url": "https://datasets.cellxgene.cziscience.com/1e44db10-b572-46cc-adae-dcc7acd44ca6.h5ad",
+  "source_bytes": 4434273970,
+  "source_sha256": "14c5e9e70007a5e7dc047f7b29405773305e1a7b9791d0789af70649cf6f46ec",
+  "qc": {"min_genes": 200, "max_mt": 20.0, "min_cells": 30},
+  "training": {"seed": 42, "outer_folds": 5, "inner_folds": 3, "max_features": 1000, "max_iter": 50000},
+  "cells": {
+    "CD4": {
+      "display_name": "广义 CD4 T 细胞",
+      "subtypes": ["CD4 Naive", "CD4 TCM", "CD4 TEM", "CD4 CTL", "CD4 Proliferating", "Treg"],
+      "boundary": "包括 Treg 和 CD4 CTL，不等同于纯常规辅助 T 细胞。"
+    },
+    "B": {
+      "display_name": "广义 B 细胞谱系",
+      "subtypes": ["B naive", "B memory", "B intermediate", "Plasmablast"],
+      "boundary": "包括 plasmablast，不等同于仅成熟静息 B 细胞。"
+    },
+    "NK": {
+      "display_name": "NK 细胞",
+      "subtypes": ["NK", "NK_CD56bright", "NK Proliferating"],
+      "boundary": "包含常规、CD56bright 和增殖注释，不混入 MAIT 或其他 T 细胞。"
+    },
+    "MONO": {
+      "display_name": "单核细胞",
+      "subtypes": ["CD14 Mono", "CD16 Mono"],
+      "boundary": "不纳入树突状细胞；细胞回收量较少，重点报告供者损失。"
+    },
+    "CD8": {
+      "display_name": "广义 CD8 T 细胞",
+      "subtypes": ["CD8 Naive", "CD8 TCM", "CD8 TEM", "CD8 Proliferating"],
+      "boundary": "排除 MAIT、gamma-delta T、double-negative T 和 Doublet 注释。"
+    }
+  }
+}

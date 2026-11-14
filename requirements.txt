@@ -1,0 +1,7 @@
+# CPU-only CD8 data preparation, nested age regression and plotting.
+h5py==3.16.0
+numpy==2.5.4
+matplotlib==3.11.2
+scipy==1.18.1
+scikit-learn==1.9.1
+threadpoolctl==3.7.0

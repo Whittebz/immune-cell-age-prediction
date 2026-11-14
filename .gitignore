@@ -1,0 +1,27 @@
+# Deny generated/private files; publish only the explicit source allowlist.
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/requirements.txt
+!/src/
+/src/*
+!/src/*.py
+!/config/
+/config/*
+!/config/cell_types.json
+!/config/cd8_tuning_v2.json
+!/docs/
+/docs/*
+!/docs/DATA.md
+!/docs/REPRODUCING.md
+!/docs/CD8_BIOLOGY_REFERENCES.json
+
+# Never include caches, credentials or generated analysis artifacts.
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.pem
+*.key
+*.log
